@@ -5,7 +5,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/olahol/melody"
-	"github.com/seanbreckenridge/currently_listening"
+	"github.com/purarue/currently_listening"
 	"github.com/urfave/cli/v2"
 	"log"
 	"net/http"

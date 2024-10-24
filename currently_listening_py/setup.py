@@ -8,9 +8,8 @@ pkg = "currently_listening_py"
 setup(
     name=pkg,
     version="0.1.0",
-    url="https://github.com/seanbreckenridge/currently_listening_py",
-    author="Sean Breckenridge",
-    author_email="seanbrecke@gmail.com",
+    url="https://github.com/purarue/currently_listening_py",
+    author="purarue",
     description=("""Local server module for mpv-history-daemon"""),
     long_description=long_description,
     long_description_content_type="text/markdown",

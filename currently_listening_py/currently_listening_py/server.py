@@ -21,11 +21,11 @@ from .socket_data import SocketBody, SetListening, ClearListening
 # if this is None, all media is allowed (as long as it has a title, artist and album)
 #
 # by default, it ignores some directories like /dev/ and /tmp/
-# https://github.com/seanbreckenridge/mpv-history-daemon/blob/master/mpv_history_daemon/utils.py
+# https://github.com/purarue/mpv-history-daemon/blob/master/mpv_history_daemon/utils.py
 GLOBAL_MATCHER: Optional[MediaAllowed] = None
 
 # personally, I configure this in my_feed, so I shall just reuse it here
-# https://github.com/seanbreckenridge/my_feed/blob/b5dc3a9970ba38bef5a531bc9e32d42541229be1/src/my_feed/sources/mpv.py#L254-L263
+# https://github.com/purarue/my_feed/blob/b5dc3a9970ba38bef5a531bc9e32d42541229be1/src/my_feed/sources/mpv.py#L254-L263
 try:
     from my_feed.sources.mpv import matcher as my_feed_matcher  # type: ignore
 

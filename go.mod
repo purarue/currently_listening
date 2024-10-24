@@ -1,4 +1,4 @@
-module github.com/seanbreckenridge/currently_listening
+module github.com/purarue/currently_listening
 
 go 1.19
 

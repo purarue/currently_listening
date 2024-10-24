@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"encoding/json"
 	"fmt"
-	"github.com/seanbreckenridge/currently_listening"
+	"github.com/purarue/currently_listening"
 	"github.com/urfave/cli/v2"
 	"io/ioutil"
 	"log"

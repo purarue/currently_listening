@@ -21,13 +21,13 @@ A personal Websocket based currently playing web server. Generally, this follows
        /***************************************************************/
 ```
 
-As an example, I have [some react code](https://github.com/seanbreckenridge/glue/blob/master/assets/frontend/currently_listening.tsx) that connects to the main server here and displays it on my website. That appears on [my website](https://sean.fish) in the bottom left if I'm currently listening to something:
+As an example, I have [some react code](https://github.com/purarue/glue/blob/master/assets/frontend/currently_listening.tsx) that connects to the main server here and displays it on my website. That appears on [my website](https://sean.fish) in the bottom left if I'm currently listening to something:
 
 https://user-images.githubusercontent.com/7804791/215688320-c7adb7cb-299e-46a4-afd4-8abd9687a868.mp4
 
 I also use this to set my discord presence:
 
-![demo discord image](https://github.com/seanbreckenridge/currently_listening/blob/main/.github/discord.png?raw=true)
+![demo discord image](https://github.com/purarue/currently_listening/blob/main/.github/discord.png?raw=true)
 
 ## Install
 
@@ -38,7 +38,7 @@ Requires `python3.10+` (for local data processing/clients) and `go` (for the rem
 The main server `./server/main.go` can be built with:
 
 ```bash
-git clone https://github.com/seanbreckenridge/currently_listening
+git clone https://github.com/purarue/currently_listening
 cd currently_listening
 go build -o currently_listening_server ./server/main.go
 cp ./currently_listening_server ~/.local/bin
@@ -82,7 +82,7 @@ The rest of the code here are clients which set the song I'm currently listening
 Install (you can also use the `Makefile` here to build both `go` tools):
 
 ```bash
-git clone https://github.com/seanbreckenridge/currently_listening
+git clone https://github.com/purarue/currently_listening
 cd currently_listening
 go build -o listenbrainz_client_poll ./listenbrainz_client/main.go
 cp ./listenbrainz_client_poll ~/.local/bin
@@ -111,8 +111,8 @@ This could run either on your local machine or remotely, but I prefer remotely a
 
 This requires:
 
-- <https://github.com/seanbreckenridge/mpv-history-daemon>
-- <https://github.com/seanbreckenridge/mpv-sockets>
+- <https://github.com/purarue/mpv-history-daemon>
+- <https://github.com/purarue/mpv-sockets>
 
 This is a pretty complex source with lots of moving parts, so to summarize:
 
@@ -158,7 +158,7 @@ This is a pretty complex source with lots of moving parts, so to summarize:
 To install the python library/server here:
 
 ```bash
-git clone https://github.com/seanbreckenridge/currently_listening
+git clone https://github.com/purarue/currently_listening
 cd currently_listening/currently_listening_py
 python3 -m pip install .
 ```
@@ -196,7 +196,7 @@ If you'd like to further customize that to allow/disallow certain paths/extensio
 
 For more info on the options: `python3 -c 'import mpv_history_daemon.utils; help(mpv_history_daemon.utils.MediaAllowed)'`
 
-Mine is configured [here](https://github.com/seanbreckenridge/my_feed/blob/b5dc3a9970ba38bef5a531bc9e32d42541229be1/src/my_feed/sources/mpv.py#L254-L263) in [`my_feed`](https://github.com/seanbreckenridge/my_feed)
+Mine is configured [here](https://github.com/purarue/my_feed/blob/b5dc3a9970ba38bef5a531bc9e32d42541229be1/src/my_feed/sources/mpv.py#L254-L263) in [`my_feed`](https://github.com/purarue/my_feed)
 
 #### print
 
@@ -218,7 +218,7 @@ curplaying() {
 }
 ```
 
-![demo terminal image](https://github.com/seanbreckenridge/currently_listening/blob/main/.github/interminal.png?raw=true)
+![demo terminal image](https://github.com/purarue/currently_listening/blob/main/.github/interminal.png?raw=true)
 
 ### `discord-presence`
 
@@ -251,7 +251,7 @@ Options:
 
 To comply with the discord RPC rate limit, this only updates to the most recent request every ~20 seconds
 
-![demo discord image](https://github.com/seanbreckenridge/currently_listening/blob/main/.github/discord.png?raw=true)
+![demo discord image](https://github.com/purarue/currently_listening/blob/main/.github/discord.png?raw=true)
 
 ### Adding new sources
 
