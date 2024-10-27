@@ -21,7 +21,7 @@ A personal Websocket based currently playing web server. Generally, this follows
        /***************************************************************/
 ```
 
-As an example, I have [some react code](https://github.com/purarue/glue/blob/master/assets/frontend/currently_listening.tsx) that connects to the main server here and displays it on my website. That appears on [my website](https://sean.fish) in the bottom left if I'm currently listening to something:
+As an example, I have [some react code](https://github.com/purarue/glue/blob/master/assets/frontend/currently_listening.tsx) that connects to the main server here and displays it on my website. That appears on [my website](https://purarue.xyz) in the bottom left if I'm currently listening to something:
 
 https://user-images.githubusercontent.com/7804791/215688320-c7adb7cb-299e-46a4-afd4-8abd9687a868.mp4
 
@@ -203,7 +203,7 @@ Mine is configured [here](https://github.com/purarue/my_feed/blob/b5dc3a9970ba38
 The `currently_listening_py` command also includes a `print` command, which can print the currently playing song as text, JSON or an image:
 
 ```
-$ currently_listening_py print --server-url 'wss://sean.fish/currently_listening/ws' -o text
+$ currently_listening_py print --server-url 'wss://purarue.xyz/currently_listening/ws' -o text
 Main Theme - Amynedd (16-Bit Adventure)
 ```
 
@@ -214,7 +214,7 @@ I use [kitty](https://sw.kovidgoyal.net/kitty/), which means I can print images 
 ```bash
 curplaying() {
     [[ "$TERM" != "xterm-kitty" ]] && return 1
-    python3 -m currently_listening_py print --server-url 'wss://sean.fish/currently_listening/ws' -o image 2> /dev/null && kitty icat --align=left ~/.cache/currently-listening-py/currently_listening.jpg
+    python3 -m currently_listening_py print --server-url 'wss://purarue.xyz/currently_listening/ws' -o image 2> /dev/null && kitty icat --align=left ~/.cache/currently-listening-py/currently_listening.jpg
 }
 ```
 
@@ -226,7 +226,7 @@ To setup your client ID, see [pypresence](https://qwertyquerty.github.io/pyprese
 
 This must be run on your computer which the `discord` application active to connect with RPC, e.g.:
 
-`currently_listening_py discord-presence --server-url wss://sean.fish/currently_listening/ws`
+`currently_listening_py discord-presence --server-url wss://purarue.xyz/currently_listening/ws`
 
 ```
 Usage: currently_listening_py discord-presence [OPTIONS]
@@ -285,7 +285,7 @@ Whenever either of those are hit with a `POST` request, it broadcasts to any cur
 
 `currently_listening_py` includes a `print` command which sends the `currently-listening` message to websocket:
 
-`$ python3 -m currently_listening_py print --server-url 'wss://sean.fish/currently_listening/ws' | jq`
+`$ python3 -m currently_listening_py print --server-url 'wss://purarue.xyz/currently_listening/ws' | jq`
 
 ```json
 {
