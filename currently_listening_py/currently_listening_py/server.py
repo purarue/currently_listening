@@ -119,10 +119,10 @@ class SocketDataManager:
     def cache_compressed_cover_art(
         cls, image: Path, save_to: Path, blur_image: bool
     ) -> Path:
-        from PIL import Image, ImageFilter  # type: ignore[import]
+        from PIL import Image, ImageFilter
 
         with open(image, "rb") as f:
-            img = Image.open(f)
+            img: Image.Image = Image.open(f)
             img.thumbnail((100, 100))
             if blur_image:
                 img = img.filter(ImageFilter.GaussianBlur(radius=5))
